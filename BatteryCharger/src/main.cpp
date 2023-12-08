@@ -89,13 +89,12 @@ void loop()
   temperatureC = 0;
 
   // average 10 readings to ensure we have smooth values.
-  printPrompt("Reading");
+  printPrompt("Reading...");
   for (int i = 0; i < 10; i++) {
     delay(1000); // delay 1 second between each read operation
     voltageProbeOne += readProbeOne();
     voltageProbeTwo += readProbeTwo(); 
     temperatureC += readTemperature();
-    printPrompt(".");
   }
   printMessage(".", "");
 
